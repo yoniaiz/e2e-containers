@@ -1,6 +1,5 @@
 {
   "name": "e2e-containers",
-  "packageManager": "yarn@3.6.4",
   "devDependencies": {
     "@playwright/test": "^1.44.1",
     "@types/node": "^20.12.13"
