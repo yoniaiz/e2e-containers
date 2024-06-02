@@ -38,3 +38,10 @@ jobs:
 
       - name: Run Playwright tests for ${{ matrix.batch }}
         run: yarn playwright test ${{ matrix.batch}}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report ${{ matrix.batch }}
+          path: playwright-report/
+          retention-days: 30
