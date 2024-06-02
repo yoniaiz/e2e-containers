@@ -12,16 +12,16 @@ jobs:
       matrix:
         batch:
           [
-            batch1/,
-            batch2/,
-            batch3/,
-            batch4/,
-            batch5/,
-            batch6/,
-            batch7/,
-            batch8/,
-            batch9/,
-            batch10/,
+            batch1,
+            batch2,
+            batch3,
+            batch4,
+            batch5,
+            batch6,
+            batch7,
+            batch8,
+            batch9,
+            batch10,
           ]
 
     steps:
@@ -37,7 +37,7 @@ jobs:
         run: yarn playwright install --with-deps
 
       - name: Run Playwright tests for ${{ matrix.batch }}
-        run: yarn playwright test ${{ matrix.batch}}
+        run: yarn playwright test ${{ matrix.batch}}/
 
       - uses: actions/upload-artifact@v4
         if: always()
